@@ -14,7 +14,7 @@ const config = {
   output: {
     filename: '[name].[hash].js',
     path: path.join(__dirname, '../dist'),
-    publicPath: '/public' // 用于打包到html时，直接加在静态资源的前面。线上可写cdn路径
+    publicPath: '/public/' // 用于打包到html时，直接加在静态资源的前面。线上可写cdn路径
   },
   module: {
     rules: [
