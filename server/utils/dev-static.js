@@ -25,7 +25,7 @@ const getTemplate = () => {
 const Module = module.constructor;
 // 使用module的构造方法来创建一个新的module
 const compiler = webpack(serverConfig);
-//使用memory-fs在内存中读写文件
+//使用memory-fs在内存中读写文件，加快打包速度
 compiler.outputFileSystem = mfs;
 
 compiler.watch({}, (err, stats) => {
@@ -46,12 +46,11 @@ compiler.watch({}, (err, stats) => {
     serverConfig.output.filename
   );
 
-  const bundle = mfs.readFileSync(bundlePath, 'utf8');
 
+  const bundle = mfs.readFileSync(bundlePath, 'utf8'); // 读字符串时一定要指定编码
+  // hack的做法
   const m = new Module();
-
   m._compile(bundle, 'server-entry.js'); // 使用时一定要指定名字
-
   serverBundle = m.exports.default;
 })
 module.exports = function (app) {
