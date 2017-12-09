@@ -3,9 +3,7 @@
   "ignore":[
     ".git",
     "node_modules/**/node_modules",
-    ".eslintrc",
-    "client",
-    "build"
+    ".eslintrc"
   ],
   "env": {
     "NODE_ENV": "development"

@@ -20,18 +20,6 @@ Test.router(() => (
     <Routes />
   </div>
 ));
-// class App extends React.Component {
-//   componentDidMount() {
-//     // ..
-//   }
-//   render() {
-//     return (
-//       <div>
-//         <p className="ppp">loremssshahahhs</p>
-//       </div>
-//     );
-//   }
-// }
 const hah = Test.start();
 console.log(hah);
 export default hah;

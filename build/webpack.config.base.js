@@ -34,11 +34,11 @@ module.exports = {
       {
         test: /.css$/,
         use: ExtractTextPlugin.extract({ // 将css单独打包的插件
-          fallback: 'style-loader',
+          fallback: 'iso-morphic-style-loader',
           use: [{
             loader: 'css-loader',
             options: { importLoader: 1 }
-          }]
+          }, 'postcss-loader']
         })
       },
       {
@@ -48,9 +48,9 @@ module.exports = {
             loader: 'css-loader'
           }, {
             loader: 'less-loader'
-          }],
-          // use style-loader in development
-          fallback: 'style-loader'
+          }, 'postcss-loader'],
+          // use iso-morphic-style-loader in development
+          fallback: 'iso-morphic-style-loader' // 解决window is not defined的问题
         })
       }
     ]
