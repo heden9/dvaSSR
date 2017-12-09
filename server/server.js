@@ -5,14 +5,24 @@ const express = require('express')
 const ReactSSR = require('react-dom/server')
 const fs = require('fs')
 const path = require('path')
+const bodyParser = require('body-parser')
 // const favicon = require('serve-favicon')
+const session = require('express-session')
 
 const isDEV = process.env.NODE_ENV === 'development'
 
 const app = express()
 
+app.use(bodyParser.json()) // 把application/json格式的数据转换成req.body上的数据
+app.use(bodyParser.urlencoded({ extended: false })) // form-data的方式转换到req.body上
 // app.use(favicon(path.join(__dirname, '')))
-
+app.use(session({
+  maxAge: 10 * 60 * 1000,
+  name: 'tid', // session放一个cookieId到浏览器端
+  resave: false, // 每次请求是否重新申请cookieId
+  saveUninitialized: false, // 类似resave
+  secret: 'bengi' // 盐
+}))
 if (!isDEV) {
   const serverEntry = require('../dist/server-entry').default // nodeJS中的require，不会默认拿到export default的内容
 

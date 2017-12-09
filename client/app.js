@@ -3,8 +3,11 @@
  */
 import React from 'react'; // 每个jsx，React组件文件，都必须引入React
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter,
+} from 'react-router-dom';
 import { AppContainer } from 'react-hot-loader'; // eslint-disable-line
-import App from './App.jsx';
+import App from './views/App';
 
 // ReactDOM.hydrate(
 // 使用hydrate来替换render
@@ -18,7 +21,9 @@ const root = document.getElementById('root');
 const render = (Component) => {
   ReactDOM.hydrate(
     <AppContainer>
-      <Component />
+      <BrowserRouter>
+        <Component />
+      </BrowserRouter>
     </AppContainer>,
     root,
   );
@@ -27,8 +32,8 @@ const render = (Component) => {
 render(App);
 
 if (module.hot) {
-  module.hot.accept('./App.jsx', () => {
-    const NextApp = require('./App.jsx').default; // eslint-disable-line
+  module.hot.accept('./views/App', () => {
+    const NextApp = require('./views/App').default; // eslint-disable-line
     render(NextApp);
   });
 }

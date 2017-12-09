@@ -1,9 +1,11 @@
 {
   "presets": [
     ["es2015", { "loose": true }],  // loose是一个比较松散的版本
+    "stage-1",
     "react"
   ],
   "plugins": [
+    // "tranform-decorators-legacy",
     "react-hot-loader/babel" // 配置react的热更新
   ]
 }

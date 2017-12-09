@@ -1,4 +1,12 @@
 import React from 'react';
-import App from './App.jsx';
+import { StaticRouter } from 'dva/router';
+import App from './views/App';
 
-export default <App />;
+export default (routerContext, url) => (
+  <StaticRouter
+    location={url}
+    context={routerContext}
+  >
+    <App />
+  </StaticRouter>
+);
