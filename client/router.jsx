@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Route,
   Redirect,
-} from 'react-router-dom';
+} from 'dva/router';
 
 const Router = () => [
   <Route key={1} path="/" exact render={() => <Redirect to="/list" />} />,

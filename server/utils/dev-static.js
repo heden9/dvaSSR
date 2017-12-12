@@ -49,7 +49,7 @@ compiler.watch({}, (err, stats) => {
   // hack的做法
   const m = new Module()
   m._compile(bundle, 'server-entry.js') // 使用时一定要指定名字
-  serverBundle = m.exports.default
+  serverBundle = m.exports
 })
 module.exports = function (app) {
   app.use('/public', proxy({
@@ -57,15 +57,19 @@ module.exports = function (app) {
   }))
   app.get('*', function (req, res) {
     getTemplate().then(template => {
-      const routerContext = {}
-      const app = serverBundle(routerContext, req.url)
-      const content = ReactDOMServer.renderToString(app)
-      if (routerContext.url) {
-        res.status(302).setHeader('Location', routerContext.url)
-        res.end()
-        return
+      if (serverBundle) {
+        const routerContext = {}
+        const app = serverBundle(routerContext, req.url)
+        const content = ReactDOMServer.renderToString(app)
+        if (routerContext.url) {
+          res.status(302).setHeader('Location', routerContext.url)
+          res.end()
+          return
+        }
+        res.send(template.replace('<!-- app -->', content))
+      } else {
+        res.send('serverBundle is running.... please wait for refresh')
       }
-      res.send(template.replace('<!-- app -->', content))
     })
   })
 }

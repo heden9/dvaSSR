@@ -5,6 +5,7 @@
     "react"
   ],
   "plugins": [
+    "add-module-exports",
     // "tranform-decorators-legacy",
     "react-hot-loader/babel" // 配置react的热更新
   ]

@@ -10,7 +10,6 @@ const bodyParser = require('body-parser')
 const session = require('express-session')
 
 const isDEV = process.env.NODE_ENV === 'development'
-
 const app = express()
 
 app.use(bodyParser.json()) // 把application/json格式的数据转换成req.body上的数据
@@ -24,7 +23,7 @@ app.use(session({
   secret: 'bengi' // 盐
 }))
 if (!isDEV) {
-  const serverEntry = require('../dist/server-entry').default // nodeJS中的require，不会默认拿到export default的内容
+  const serverEntry = require('../dist/server-entry') // nodeJS中的require，不会默认拿到export default的内容
 
   // readFileSync 同步执行读的操作，utf8指定编码格式，默认为nodeJS中的buffer。
   const template = fs.readFileSync(path.join(__dirname, '../dist/index.html'), 'utf8')

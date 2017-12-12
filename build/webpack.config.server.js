@@ -14,7 +14,7 @@ const config = webpackMerge(baseConfig, {
   output: {
     filename: 'server-entry.js',
     path: path.join(__dirname, '../dist'),
-    publicPath: '/public', // 用于打包到html时，直接加在静态资源的前面。线上可写cdn路径
+    publicPath: '/public/', // 用于打包到html时，直接加在静态资源的前面。线上可写cdn路径
     libraryTarget: 'commonjs2' // 打包出来的js使用的模块方案，amd, cmd, umd, commonJS 等等
   }
 })

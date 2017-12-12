@@ -47,11 +47,35 @@ module.exports = {
           use: [{
             loader: 'css-loader'
           }, {
-            loader: 'less-loader'
-          }, 'postcss-loader'],
+            loader: 'postcss-loader'
+          }, {
+            loader: 'less-loader',
+            options: {
+              modifyVars: {
+                '@primary-color': 'rgb(100,194,92)',
+                '@primary-grey': '#949494',
+                '@hd': '2px'
+              }
+            }
+          }],
           // use iso-morphic-style-loader in development
           fallback: 'iso-morphic-style-loader' // 解决window is not defined的问题
         })
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader',
+        include: path.join(__dirname, '../client/assets/icon')
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 500, // 大小限制， 小于该大小的图片会被打包成base64
+            outputPath: 'images/' // 文件输出的路径
+          }
+        }]
       }
     ]
   }

@@ -1,9 +1,16 @@
 *{
-  color: green;
+  color: @primary-grey;
+}
+.translate3d(@x:0, @y:0, @z:0) {
+  -webkit-transform: translate3d(@x,@y,@z);
+  transform: translate3d(@x,@y,@z);
 }
 div{
-  color: red;
+  color: @primary-color;
   transform: rotate(-30deg);
+  .translate3d(0, 0, 0);
 }
 
-
+.ppp{
+  display: flex;
+}
