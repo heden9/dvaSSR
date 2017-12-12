@@ -5,7 +5,7 @@
     "react"
   ],
   "plugins": [
-    "add-module-exports",
+    "add-module-exports", // 配置require的默认default
     // "tranform-decorators-legacy",
     "react-hot-loader/babel" // 配置react的热更新
   ]
