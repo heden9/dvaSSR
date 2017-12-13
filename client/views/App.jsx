@@ -1,36 +1,40 @@
-/**
- * 声明整个页面的内容
- */
+
 import React from 'react';
-import dva from 'dva';
-import createMemoryHistory from 'history/createMemoryHistory'; // 重要
-// import createBrowserHistory from 'history/createBrowserHistory';
+import PropTypes from 'prop-types';
 import {
   Link,
-  Router,
+  withRouter,
 } from 'react-router-dom';
-import './test.less';
-import Routes from '../router';
+import {
+  inject,
+  observer,
+} from 'mobx-react';
+import DevTools from 'mobx-react-devtools';
+import Routes from '../config/router';
+import AppState from '../store/app-state';
 
-const Test = dva({
-  history: createMemoryHistory(),
-});
+@inject('appState') // 注入mobx的store
+@withRouter // 没有这个的话...嘻嘻 组件不会刷新哦
+@observer // 添加观察者
+export default class App extends React.Component {
+  componentDidMount() {
+    // do something here
+  }
+  render() {
+    return [
+      <div key="banner">
+        <DevTools />
+        <div>{this.props.appState.name}</div>
+        <Link to="/list">首页</Link>
+        <br />
+        <Link to="/detail">详情页</Link>
+        <Routes />
+      </div>,
+    ];
+  }
+}
 
-Test.model(require('./model'));
+App.propTypes = {
+  appState: PropTypes.instanceOf(AppState),
 
-Test.router(({ history }) => (
-  <Router history={history}>
-    <div>
-      <div className="ppp" >
-        <img src={require('../assets/yay.jpg')} alt="" />
-      </div>
-      <img src={require('../assets/icon/home.svg')} alt="" />
-      <Link to="/list">list</Link>
-      <Link to="/home">home</Link>
-      <Routes />
-    </div>
-  </Router>
-));
-const hah = Test.start();
-console.log(hah);
-export default hah;
+};

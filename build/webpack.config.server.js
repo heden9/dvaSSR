@@ -11,6 +11,7 @@ const config = webpackMerge(baseConfig, {
   entry: {
     app: path.join(__dirname, '../client/server-entry.js') // path.join是node的语法，用于标志当前项目的根目录
   },
+  externals: Object.keys(require('../package.json').dependencies),
   output: {
     filename: 'server-entry.js',
     path: path.join(__dirname, '../dist'),

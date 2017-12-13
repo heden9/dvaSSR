@@ -21,6 +21,10 @@ const config = webpackMerge(baseConfig, {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, '../client/template.html')
+    }),
+    new HtmlWebpackPlugin({
+      template: '!!ejs-compiled-loader!' + path.join(__dirname, '../client/server.template.ejs'),
+      filename: 'server.ejs'
     })
   ]
 })
@@ -40,9 +44,12 @@ if (isDEV) {
     overlay: {
       errors: true // 在webpack编译出错的时候，在页面上显示弹窗
     },
-    publicPath: '/public',
+    publicPath: '/public/',
     historyApiFallback: { // 让我们所有404的请求都返回这个
       index: '/public/index.html'
+    },
+    proxy: {
+      '/api': 'http://localhost:3333'
     }
   }
   config.plugins.push(new webpack.HotModuleReplacementPlugin()) // 配置hot-loader-replacement
