@@ -18,7 +18,7 @@ import AppState from '../store/app-state';
 @observer // 添加观察者
 export default class App extends React.Component {
   componentDidMount() {
-    // do something here
+    // todo
   }
   render() {
     return [
