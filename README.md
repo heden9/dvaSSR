@@ -4,7 +4,10 @@
 
 ### Feature
 
-- 基于dva、less
+- 基于dva
 - server和client同步热更新
 - 内置svg-sprite-loader、pxtorem等强大移动端配置
+
+
+
 
