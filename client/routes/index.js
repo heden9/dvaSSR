@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
-import { Link, Router } from 'react-router-dom';
+import { Link, Router } from 'dva/router';
 import Routes from '../router';
 
 const Main = ({ history, count }) => (

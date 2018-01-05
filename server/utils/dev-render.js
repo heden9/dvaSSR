@@ -8,7 +8,7 @@ module.exports = function (bundle, template, req, res) {
   return new Promise((resolve, reject) => {
     if (bundle) {
       const routerContext = {}
-      const state = {}
+      const state = bundle.getState()
       const app = bundle.default(routerContext, req.url)
       const content = ReactDOMServer.renderToString(app)
       if (routerContext.url) {
