@@ -21,6 +21,10 @@ const config = webpackMerge(baseConfig, {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, '../client/template.html')
+    }),
+    new HtmlWebpackPlugin({
+      template: '!!ejs-compiled-loader!' + path.join(__dirname, '../client/server.tmp.ejs'),
+      filename: 'server.ejs'
     })
   ]
 })
@@ -45,6 +49,7 @@ if (isDEV) {
       index: '/public/index.html'
     }
   }
+  config.devtool = '#source-map'
   config.plugins.push(new webpack.HotModuleReplacementPlugin()) // 配置hot-loader-replacement
 }
 

@@ -4,7 +4,7 @@ const webpack = require('webpack')
 const path = require('path')
 const proxy = require('http-proxy-middleware')
 const MemoryFs = require('memory-fs')
-const ReactDOMServer = require('react-dom/server')
+const devRender = require('./dev-render')
 const mfs = new MemoryFs()
 
 // 声明一个serverBundle
@@ -13,7 +13,7 @@ let serverBundle
 const serverConfig = require('../../build/webpack.config.server')
 const getTemplate = () => {
   return new Promise((resolve, reject) => {
-    axios.get('http://localhost:8888/public/index.html')
+    axios.get('http://localhost:8888/public/server.ejs')
       .then(res => {
         resolve(res.data)
       })
@@ -57,19 +57,7 @@ module.exports = function (app) {
   }))
   app.get('*', function (req, res) {
     getTemplate().then(template => {
-      if (serverBundle) {
-        const routerContext = {}
-        const app = serverBundle(routerContext, req.url)
-        const content = ReactDOMServer.renderToString(app)
-        if (routerContext.url) {
-          res.status(302).setHeader('Location', routerContext.url)
-          res.end()
-          return
-        }
-        res.send(template.replace('<!-- app -->', content))
-      } else {
-        res.send('serverBundle is running.... please wait for refresh')
-      }
+      return devRender(serverBundle, template, req, res)
     })
   })
 }

@@ -3,6 +3,11 @@ export default {
   namespace: 'comment',
 
   state: {
-    value: '',
+    value: 0,
+  },
+  reducers: {
+    save(state, { payload: { value } }) {
+      return { ...state, value };
+    },
   },
 };
