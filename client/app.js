@@ -29,9 +29,9 @@ const render = (Component) => {
 
 const initConfig = {
   history: createBrowserHistory(),
-  initialState: window.__INITIAL__STATE__ || {}, // eslint-disable-line
+  initialState: window.__INITIAL__STATE__ || {}, // eslint-disable-line  
 };
-
+// 我想刷个绿点
 render(App(initConfig).start());
 
 if (module.hot) {
