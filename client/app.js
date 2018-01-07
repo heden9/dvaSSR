@@ -8,7 +8,6 @@ import { AppContainer } from 'react-hot-loader'; // eslint-disable-line
 import App from './views/App';
 
 const initialState = window.__INITIAL__STATE__ || {}; // eslint-disable-line
-console.log(initialState);
 // ReactDOM.hydrate(
 // 使用hydrate来替换render
 // hydrate 描述的是 ReactDOM 复用 ReactDOMServer 服务端渲染的内容时尽可能保留结构，并补充事件绑定等 Client 特有内容的过程。

@@ -1,6 +1,6 @@
 
 export default {
-  namespace: 'comment',
+  namespace: 'count',
 
   state: {
     value: 0,

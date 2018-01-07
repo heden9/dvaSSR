@@ -8,6 +8,6 @@ import './test.less';
 export default ({ history, initialState }) => create({
   history,
   initialState,
-  models: [require('./model')],
+  models: [require('../models/example')],
   routes: require('../routes/index'),
 });
