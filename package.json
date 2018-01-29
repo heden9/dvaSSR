@@ -20,6 +20,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
     "dva": "^2.1.0",
     "dva-core": "^1.1.0",
     "ejs": "^2.5.7",

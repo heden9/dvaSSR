@@ -7,12 +7,12 @@ const path = require('path')
 const bodyParser = require('body-parser')
 // const favicon = require('serve-favicon')
 const session = require('express-session')
-
+const compress = require('compression')
 const devRender = require('./utils/dev-render')
 
 const isDEV = process.env.NODE_ENV === 'development'
 const app = express()
-
+app.use(compress()) // 开启gzip
 app.use(bodyParser.json()) // 把application/json格式的数据转换成req.body上的数据
 app.use(bodyParser.urlencoded({ extended: false })) // form-data的方式转换到req.body上
 // app.use(favicon(path.join(__dirname, '')))
