@@ -56,6 +56,12 @@ if (isDEV) {
     stats: { colors: true }, // 彩色输出
     historyApiFallback: { // 让我们所有404的请求都返回这个
       index: '/public/index.html'
+    },
+    proxy: {
+      '/api': {
+        target: 'http://0.0.0.0:3333/api',
+        pathRewrite: {'^/api': ''}
+      }
     }
   }
   config.devtool = '#source-map'
@@ -67,7 +73,7 @@ if (isDEV) {
       'react',
       'react-dom',
       'react-router-dom',
-      'dva',
+      'dva-core',
       'axios'
     ]
   }

@@ -5,6 +5,8 @@
     "react"
   ],
   "plugins": [
+    "transform-runtime",
+    "transform-decorators-legacy",
     "add-module-exports", // 配置require的默认default
     // "tranform-decorators-legacy",
     "react-hot-loader/babel" // 配置react的热更新

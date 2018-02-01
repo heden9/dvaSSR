@@ -3,6 +3,8 @@
  */
 import React from 'react'; // 每个jsx，React组件文件，都必须引入React
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import { AppContainer } from 'react-hot-loader'; // eslint-disable-line
 import App from './views/App';
@@ -14,24 +16,28 @@ const initialState = window.__INITIAL__STATE__ || {}; // eslint-disable-line
 //   <App/>,
 //   document.getElementById('root')
 // );
-
+const initConfig = {
+  initialState, // eslint-disable-line
+  history: createBrowserHistory(),
+};
+const app = App(initConfig);
 const root = document.getElementById('root');
 
 const render = (Component) => {
   ReactDOM.hydrate(
     <AppContainer>
-      <Component />
+      <Provider store={app._store} >
+        <BrowserRouter>
+          <Component />
+        </BrowserRouter>
+      </Provider>
     </AppContainer>,
     root,
   );
 };
 
-const initConfig = {
-  history: createBrowserHistory(),
-  initialState: window.__INITIAL__STATE__ || {}, // eslint-disable-line  
-};
 // 我想刷个绿点
-render(App(initConfig).start());
+render(app.start());
 
 if (module.hot) {
   module.hot.accept('./views/App', () => {

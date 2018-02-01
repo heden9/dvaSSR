@@ -1,9 +1,9 @@
 import React from 'react';
-import { connect } from 'dva';
+import { connect } from 'react-redux';
 import {
   Route,
   Redirect,
-} from 'dva/router';
+} from 'react-router-dom';
 
 function mapStateToProps({ count: { value } }) {
   return { count: value };

@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-const baseUrl = 'http://cnodejs.org/api/v1'
+const baseUrl = ''
 
 module.exports = function (req, res, next) {
   const path = req.path
