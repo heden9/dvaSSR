@@ -9,11 +9,7 @@ export function create({
   history,
   ...config
 }, isServer) {
-  const app = core.create(config, {
-    setupApp(app_) {
-      app_._history = patchHistory(history); // eslint-disable-line
-    },
-  });
+  const app = core.create(config);
   models.forEach((item) => {
     app.model(item);
   });
@@ -22,13 +18,4 @@ export function create({
     app.start = () => routes;
   }
   return app;
-}
-
-function patchHistory(history) {
-  const oldListen = history.listen;
-  history.listen = (callback) => {
-    callback(history.location);
-    return oldListen.call(history, callback);
-  };
-  return history;
 }
