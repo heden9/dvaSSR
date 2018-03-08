@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticRouter } from 'dva/router';
+import { StaticRouter } from 'react-router';
 import { Provider } from 'react-redux';
 import create from './views/App';
 
