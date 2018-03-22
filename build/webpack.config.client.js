@@ -10,8 +10,9 @@ const webpackMerge = require('webpack-merge')
 const baseConfig = require('./webpack.config.base')
 const NamedModulesPlugin = require('name-all-modules-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin // 包分析插件
+const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
-const analyzer = false // 是否开启分析模式
+const analyzer = true // 是否开启分析模式
 const config = webpackMerge(baseConfig, {
   entry: {
     app: path.join(__dirname, '../client/app.js') // path.join是node的语法，用于标志当前项目的根目录
@@ -65,7 +66,11 @@ if (isDEV) {
     }
   }
   config.devtool = '#source-map'
-  config.plugins.push(new webpack.HotModuleReplacementPlugin()) // 配置hot-loader-replacement
+  config.plugins.push(
+    new webpack.HotModuleReplacementPlugin(), // 配置hot-loader-replacement
+    new ProgressBarPlugin({ summary: false })
+
+  )
 } else {
   config.entry = {
     app: path.join(__dirname, '../client/app.js'),
@@ -79,7 +84,11 @@ if (isDEV) {
   }
   config.output.filename = '[name].[chunkhash].js' // 有多个entry时，文件的hash是每个文件自己的hash，而不是总的打包的hash
   config.plugins.push(
-    new webpack.optimize.UglifyJsPlugin(), // 压缩js
+    new webpack.optimize.DedupePlugin(), // 删除重复依赖
+    new webpack.optimize.UglifyJsPlugin({
+      compress: { warnings: false },
+      comments: false
+    }), // 压缩js
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
     }), // 自动提取重复代码  会存在一个问题，vendor每次打包的hash都会变因为webpack他自身的代码每次打包都不一样
