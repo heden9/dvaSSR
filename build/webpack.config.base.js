@@ -1,5 +1,6 @@
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+console.log(process.env.NODE_ENV)
 module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
@@ -37,7 +38,10 @@ module.exports = {
           fallback: 'iso-morphic-style-loader',
           use: [{
             loader: 'css-loader',
-            options: { importLoader: 1 }
+            options: {
+              importLoader: 1,
+              minimize: true // css压缩
+            }
           }, 'postcss-loader']
         })
       },
@@ -45,7 +49,10 @@ module.exports = {
         test: /.less$/,
         use: ExtractTextPlugin.extract({
           use: [{
-            loader: 'css-loader'
+            loader: 'css-loader',
+            options: {
+              minimize: true // css压缩
+            }
           }, {
             loader: 'postcss-loader'
           }, {

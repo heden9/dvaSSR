@@ -19,7 +19,5 @@ export default (app, routerContext, url) => {
 export function getState() {
   return app._store.getState(); // eslint-disable-line
 }
-export {
-  create,
-};
+export { create };
 

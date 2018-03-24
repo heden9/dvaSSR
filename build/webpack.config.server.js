@@ -8,6 +8,7 @@ const baseConfig = require('./webpack.config.base')
 
 const config = webpackMerge(baseConfig, {
   target: 'node', // webpack配置项，针对打包完成的内容的执行环境
+  mode: 'development',
   entry: {
     app: path.join(__dirname, '../client/server-entry.js') // path.join是node的语法，用于标志当前项目的根目录
   },
