@@ -22,15 +22,16 @@ module.exports = {
         ]
       },
       {
-        test: /.jsx$/,
-        loader: 'babel-loader' // babel-loader 需要 babel-core 的支持
-      },
-      {
-        test: /.js$/,
-        loader: 'babel-loader',
+        test: /.(js|jsx)$/,
         exclude: [ // 排除node_modules目录，不然会有问题
           path.join(__dirname, '../node_modules')
-        ]
+        ],
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true
+          }
+        }
       },
       {
         test: /.css$/,

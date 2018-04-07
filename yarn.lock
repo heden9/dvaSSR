@@ -481,7 +481,7 @@ babel-helper-builder-binary-assignment-operator-visitor@^6.24.1:
 
 babel-helper-builder-react-jsx@^6.24.1:
   version "6.26.0"
-  resolved "http://registry.npm.taobao.org/babel-helper-builder-react-jsx/download/babel-helper-builder-react-jsx-6.26.0.tgz#39ff8313b75c8b65dceff1f31d383e0ff2a408a0"
+  resolved "https://registry.npmjs.org/babel-helper-builder-react-jsx/-/babel-helper-builder-react-jsx-6.26.0.tgz#39ff8313b75c8b65dceff1f31d383e0ff2a408a0"
   dependencies:
     babel-runtime "^6.26.0"
     babel-types "^6.26.0"
@@ -659,7 +659,7 @@ babel-plugin-syntax-function-bind@^6.8.0:
 
 babel-plugin-syntax-jsx@^6.3.13, babel-plugin-syntax-jsx@^6.8.0:
   version "6.18.0"
-  resolved "http://registry.npm.taobao.org/babel-plugin-syntax-jsx/download/babel-plugin-syntax-jsx-6.18.0.tgz#0af32a9a6e13ca7a3fd5069e62d7b0f58d0d8946"
+  resolved "https://registry.npmjs.org/babel-plugin-syntax-jsx/-/babel-plugin-syntax-jsx-6.18.0.tgz#0af32a9a6e13ca7a3fd5069e62d7b0f58d0d8946"
 
 babel-plugin-syntax-object-rest-spread@^6.8.0:
   version "6.13.0"
@@ -933,27 +933,27 @@ babel-plugin-transform-object-rest-spread@^6.22.0:
 
 babel-plugin-transform-react-display-name@^6.23.0:
   version "6.25.0"
-  resolved "http://registry.npm.taobao.org/babel-plugin-transform-react-display-name/download/babel-plugin-transform-react-display-name-6.25.0.tgz#67e2bf1f1e9c93ab08db96792e05392bf2cc28d1"
+  resolved "https://registry.npmjs.org/babel-plugin-transform-react-display-name/-/babel-plugin-transform-react-display-name-6.25.0.tgz#67e2bf1f1e9c93ab08db96792e05392bf2cc28d1"
   dependencies:
     babel-runtime "^6.22.0"
 
 babel-plugin-transform-react-jsx-self@^6.22.0:
   version "6.22.0"
-  resolved "http://registry.npm.taobao.org/babel-plugin-transform-react-jsx-self/download/babel-plugin-transform-react-jsx-self-6.22.0.tgz#df6d80a9da2612a121e6ddd7558bcbecf06e636e"
+  resolved "https://registry.npmjs.org/babel-plugin-transform-react-jsx-self/-/babel-plugin-transform-react-jsx-self-6.22.0.tgz#df6d80a9da2612a121e6ddd7558bcbecf06e636e"
   dependencies:
     babel-plugin-syntax-jsx "^6.8.0"
     babel-runtime "^6.22.0"
 
 babel-plugin-transform-react-jsx-source@^6.22.0:
   version "6.22.0"
-  resolved "http://registry.npm.taobao.org/babel-plugin-transform-react-jsx-source/download/babel-plugin-transform-react-jsx-source-6.22.0.tgz#66ac12153f5cd2d17b3c19268f4bf0197f44ecd6"
+  resolved "https://registry.npmjs.org/babel-plugin-transform-react-jsx-source/-/babel-plugin-transform-react-jsx-source-6.22.0.tgz#66ac12153f5cd2d17b3c19268f4bf0197f44ecd6"
   dependencies:
     babel-plugin-syntax-jsx "^6.8.0"
     babel-runtime "^6.22.0"
 
 babel-plugin-transform-react-jsx@^6.24.1:
   version "6.24.1"
-  resolved "http://registry.npm.taobao.org/babel-plugin-transform-react-jsx/download/babel-plugin-transform-react-jsx-6.24.1.tgz#840a028e7df460dfc3a2d29f0c0d91f6376e66a3"
+  resolved "https://registry.npmjs.org/babel-plugin-transform-react-jsx/-/babel-plugin-transform-react-jsx-6.24.1.tgz#840a028e7df460dfc3a2d29f0c0d91f6376e66a3"
   dependencies:
     babel-helper-builder-react-jsx "^6.24.1"
     babel-plugin-syntax-jsx "^6.8.0"
@@ -980,7 +980,7 @@ babel-plugin-transform-strict-mode@^6.24.1:
 
 babel-preset-env@^1.6.1:
   version "1.6.1"
-  resolved "http://registry.npm.taobao.org/babel-preset-env/download/babel-preset-env-1.6.1.tgz#a18b564cc9b9afdf4aae57ae3c1b0d99188e6f48"
+  resolved "https://registry.npmjs.org/babel-preset-env/-/babel-preset-env-1.6.1.tgz#a18b564cc9b9afdf4aae57ae3c1b0d99188e6f48"
   dependencies:
     babel-plugin-check-es2015-constants "^6.22.0"
     babel-plugin-syntax-trailing-function-commas "^6.22.0"
@@ -1013,13 +1013,7 @@ babel-preset-env@^1.6.1:
     invariant "^2.2.2"
     semver "^5.3.0"
 
-babel-preset-es2015-loose@^8.0.0:
-  version "8.0.0"
-  resolved "http://registry.npm.taobao.org/babel-preset-es2015-loose/download/babel-preset-es2015-loose-8.0.0.tgz#82ee293ab31329c7a94686b644b62adfbcdc3f57"
-  dependencies:
-    modify-babel-preset "^3.1.0"
-
-babel-preset-es2015@^6.24.1, babel-preset-es2015@^6.9.0:
+babel-preset-es2015@^6.9.0:
   version "6.24.1"
   resolved "http://registry.npm.taobao.org/babel-preset-es2015/download/babel-preset-es2015-6.24.1.tgz#d44050d6bc2c9feea702aaf38d727a0210538939"
   dependencies:
@@ -1050,13 +1044,13 @@ babel-preset-es2015@^6.24.1, babel-preset-es2015@^6.9.0:
 
 babel-preset-flow@^6.23.0:
   version "6.23.0"
-  resolved "http://registry.npm.taobao.org/babel-preset-flow/download/babel-preset-flow-6.23.0.tgz#e71218887085ae9a24b5be4169affb599816c49d"
+  resolved "https://registry.npmjs.org/babel-preset-flow/-/babel-preset-flow-6.23.0.tgz#e71218887085ae9a24b5be4169affb599816c49d"
   dependencies:
     babel-plugin-transform-flow-strip-types "^6.22.0"
 
 babel-preset-react@^6.24.1:
   version "6.24.1"
-  resolved "http://registry.npm.taobao.org/babel-preset-react/download/babel-preset-react-6.24.1.tgz#ba69dfaea45fc3ec639b6a4ecea6e17702c91380"
+  resolved "https://registry.npmjs.org/babel-preset-react/-/babel-preset-react-6.24.1.tgz#ba69dfaea45fc3ec639b6a4ecea6e17702c91380"
   dependencies:
     babel-plugin-syntax-jsx "^6.3.13"
     babel-plugin-transform-react-display-name "^6.23.0"
@@ -1388,11 +1382,11 @@ browserslist@^1.3.6, browserslist@^1.5.2, browserslist@^1.7.6:
     electron-to-chromium "^1.2.7"
 
 browserslist@^2.1.2:
-  version "2.9.1"
-  resolved "http://registry.npm.taobao.org/browserslist/download/browserslist-2.9.1.tgz#b72d3982ab01b5cd24da62ff6d45573886aff275"
+  version "2.11.3"
+  resolved "https://registry.npmjs.org/browserslist/-/browserslist-2.11.3.tgz#fe36167aed1bbcde4827ebfe71347a2cc70b99b2"
   dependencies:
-    caniuse-lite "^1.0.30000770"
-    electron-to-chromium "^1.3.27"
+    caniuse-lite "^1.0.30000792"
+    electron-to-chromium "^1.3.30"
 
 buffer-from@^1.0.0:
   version "1.0.0"
@@ -1515,9 +1509,9 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   version "1.0.30000780"
   resolved "http://registry.npm.taobao.org/caniuse-db/download/caniuse-db-1.0.30000780.tgz#8d1977561d00ff0f0ed2b6b66140328ab4504c0a"
 
-caniuse-lite@^1.0.30000770:
-  version "1.0.30000777"
-  resolved "http://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30000777.tgz#31c18a4a8cd49782ebb305c8e8a93e6b3b3e4f13"
+caniuse-lite@^1.0.30000792:
+  version "1.0.30000824"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30000824.tgz#de3bc1ba0bff4937302f8cb2a8632a8cc1c07f9a"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -2188,7 +2182,7 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.6, debug@^2.6.8:
 
 debug@^3.1.0:
   version "3.1.0"
-  resolved "http://registry.npm.taobao.org/debug/download/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+  resolved "https://registry.npmjs.org/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   dependencies:
     ms "2.0.0"
 
@@ -2465,22 +2459,6 @@ dva-core@^1.1.0:
     redux-saga "^0.15.4"
     warning "^3.0.0"
 
-dva@^2.1.0:
-  version "2.1.0"
-  resolved "http://registry.npm.taobao.org/dva/download/dva-2.1.0.tgz#5a2ffea411f86d3744e2e9aef3fa0a5db6961e3a"
-  dependencies:
-    babel-runtime "^6.26.0"
-    dva-core "^1.1.0"
-    global "^4.3.2"
-    history "^4.6.3"
-    invariant "^2.2.2"
-    isomorphic-fetch "^2.2.1"
-    react-async-component "^1.0.0-beta.3"
-    react-redux "^5.0.5"
-    react-router-dom "^4.1.2"
-    react-router-redux "5.0.0-alpha.6"
-    redux "^3.7.2"
-
 ecc-jsbn@~0.1.1:
   version "0.1.1"
   resolved "http://registry.npm.taobao.org/ecc-jsbn/download/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"
@@ -2514,9 +2492,9 @@ electron-to-chromium@^1.2.7:
   version "1.3.28"
   resolved "http://registry.npm.taobao.org/electron-to-chromium/download/electron-to-chromium-1.3.28.tgz#8dd4e6458086644e9f9f0a1cf32e2a1f9dffd9ee"
 
-electron-to-chromium@^1.3.27:
-  version "1.3.27"
-  resolved "http://registry.npm.taobao.org/electron-to-chromium/download/electron-to-chromium-1.3.27.tgz#78ecb8a399066187bb374eede35d9c70565a803d"
+electron-to-chromium@^1.3.30:
+  version "1.3.42"
+  resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.42.tgz#95c33bf01d0cc405556aec899fe61fd4d76ea0f9"
 
 elegant-spinner@^1.0.1:
   version "1.0.1"
@@ -3646,7 +3624,7 @@ he@1.1.x, he@^1.1.1:
   version "1.1.1"
   resolved "http://registry.npm.taobao.org/he/download/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
-history@^4.5.1, history@^4.6.3, history@^4.7.2:
+history@^4.7.2:
   version "4.7.2"
   resolved "http://registry.npm.taobao.org/history/download/history-4.7.2.tgz#22b5c7f31633c5b8021c7f4a8a954ac139ee8d5b"
   dependencies:
@@ -3668,7 +3646,7 @@ hoek@2.x.x:
   version "2.16.3"
   resolved "http://registry.npm.taobao.org/hoek/download/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
 
-hoist-non-react-statics@^2.2.1, hoist-non-react-statics@^2.2.2, hoist-non-react-statics@^2.3.0:
+hoist-non-react-statics@^2.2.2, hoist-non-react-statics@^2.3.0:
   version "2.3.1"
   resolved "http://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-2.3.1.tgz#343db84c6018c650778898240135a1420ee22ce0"
 
@@ -4302,7 +4280,7 @@ isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "http://registry.npm.taobao.org/isobject/download/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
 
-isomorphic-fetch@^2.1.1, isomorphic-fetch@^2.2.1:
+isomorphic-fetch@^2.1.1:
   version "2.2.1"
   resolved "http://registry.npm.taobao.org/isomorphic-fetch/download/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
   dependencies:
@@ -4663,7 +4641,7 @@ lodash-es@^4.17.5:
   version "4.17.7"
   resolved "http://registry.npm.taobao.org/lodash-es/download/lodash-es-4.17.7.tgz#db240a3252c3dd8360201ac9feef91ac977ea856"
 
-lodash-es@^4.2.0, lodash-es@^4.2.1:
+lodash-es@^4.2.1:
   version "4.17.4"
   resolved "http://registry.npm.taobao.org/lodash-es/download/lodash-es-4.17.4.tgz#dcc1d7552e150a0640073ba9cb31d70f032950e7"
 
@@ -5087,12 +5065,6 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   resolved "http://registry.npm.taobao.org/mkdirp/download/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
-
-modify-babel-preset@^3.1.0:
-  version "3.2.1"
-  resolved "http://registry.npm.taobao.org/modify-babel-preset/download/modify-babel-preset-3.2.1.tgz#d7172aa3c0822ed3fc08e308fd0971295136ab50"
-  dependencies:
-    require-relative "^0.8.7"
 
 move-concurrently@^1.0.1:
   version "1.0.1"
@@ -6324,17 +6296,13 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-async-component@^1.0.0-beta.3:
-  version "1.0.2"
-  resolved "http://registry.npm.taobao.org/react-async-component/download/react-async-component-1.0.2.tgz#b041722bf7734a95c51dc9fc2f28ec9e918e9659"
-
 react-deep-force-update@^2.1.1:
   version "2.1.1"
   resolved "http://registry.npm.taobao.org/react-deep-force-update/download/react-deep-force-update-2.1.1.tgz#8ea4263cd6455a050b37445b3f08fd839d86e909"
 
-react-dom@^16.2.0:
-  version "16.2.0"
-  resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-16.2.0.tgz#69003178601c0ca19b709b33a83369fe6124c044"
+react-dom@^16.3.1:
+  version "16.3.1"
+  resolved "https://registry.npmjs.org/react-dom/-/react-dom-16.3.1.tgz#6a3c90a4fb62f915bdbcf6204422d93a7d4ca573"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -6372,7 +6340,7 @@ react-proxy@^3.0.0-alpha.0:
   dependencies:
     lodash "^4.6.1"
 
-react-redux@^5.0.5:
+react-redux@^5.0.7:
   version "5.0.7"
   resolved "http://registry.npm.taobao.org/react-redux/download/react-redux-5.0.7.tgz#0dc1076d9afb4670f993ffaef44b8f8c1155a4c8"
   dependencies:
@@ -6383,18 +6351,7 @@ react-redux@^5.0.5:
     loose-envify "^1.1.0"
     prop-types "^15.6.0"
 
-react-redux@^5.0.6:
-  version "5.0.6"
-  resolved "http://registry.npm.taobao.org/react-redux/download/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"
-  dependencies:
-    hoist-non-react-statics "^2.2.1"
-    invariant "^2.0.0"
-    lodash "^4.2.0"
-    lodash-es "^4.2.0"
-    loose-envify "^1.1.0"
-    prop-types "^15.5.10"
-
-react-router-dom@^4.1.2, react-router-dom@^4.2.2:
+react-router-dom@^4.2.2:
   version "4.2.2"
   resolved "http://registry.npm.taobao.org/react-router-dom/download/react-router-dom-4.2.2.tgz#c8a81df3adc58bba8a76782e946cbd4eae649b8d"
   dependencies:
@@ -6405,15 +6362,7 @@ react-router-dom@^4.1.2, react-router-dom@^4.2.2:
     react-router "^4.2.0"
     warning "^3.0.0"
 
-react-router-redux@5.0.0-alpha.6:
-  version "5.0.0-alpha.6"
-  resolved "http://registry.npm.taobao.org/react-router-redux/download/react-router-redux-5.0.0-alpha.6.tgz#7418663c2ecd3c51be856fcf28f3d1deecc1a576"
-  dependencies:
-    history "^4.5.1"
-    prop-types "^15.5.4"
-    react-router "^4.1.1"
-
-react-router@^4.1.1, react-router@^4.2.0:
+react-router@^4.2.0:
   version "4.2.0"
   resolved "http://registry.npm.taobao.org/react-router/download/react-router-4.2.0.tgz#61f7b3e3770daeb24062dae3eedef1b054155986"
   dependencies:
@@ -6432,9 +6381,9 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
 
-react@^16.2.0:
-  version "16.2.0"
-  resolved "http://registry.npm.taobao.org/react/download/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
+react@^16.3.1:
+  version "16.3.1"
+  resolved "https://registry.npmjs.org/react/-/react-16.3.1.tgz#4a2da433d471251c69b6033ada30e2ed1202cfd8"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -6594,7 +6543,7 @@ redux-saga@^0.15.4:
   version "0.15.6"
   resolved "http://registry.npm.taobao.org/redux-saga/download/redux-saga-0.15.6.tgz#8638dc522de6c6c0a496fe8b2b5466287ac2dc4d"
 
-redux@^3.7.1, redux@^3.7.2:
+redux@^3.7.1:
   version "3.7.2"
   resolved "http://registry.npm.taobao.org/redux/download/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
   dependencies:
@@ -6752,10 +6701,6 @@ require-from-string@^1.1.0:
 require-main-filename@^1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/require-main-filename/download/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
-
-require-relative@^0.8.7:
-  version "0.8.7"
-  resolved "http://registry.npm.taobao.org/require-relative/download/require-relative-0.8.7.tgz#7999539fc9e047a37928fa196f8e1563dabd36de"
 
 require-uncached@^1.0.3:
   version "1.0.3"
@@ -7722,7 +7667,7 @@ uglify-js@~1.3.4:
 
 uglifyjs-webpack-plugin@^1.1.1:
   version "1.2.4"
-  resolved "http://registry.npm.taobao.org/uglifyjs-webpack-plugin/download/uglifyjs-webpack-plugin-1.2.4.tgz#5eec941b2e9b8538be0a20fc6eda25b14c7c1043"
+  resolved "https://registry.npmjs.org/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.2.4.tgz#5eec941b2e9b8538be0a20fc6eda25b14c7c1043"
   dependencies:
     cacache "^10.0.4"
     find-cache-dir "^1.0.0"
@@ -8141,9 +8086,9 @@ webpack-sources@^1.0.1, webpack-sources@^1.1.0:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^4.2.0:
+webpack@4.2.0:
   version "4.2.0"
-  resolved "http://registry.npm.taobao.org/webpack/download/webpack-4.2.0.tgz#a4f80807651a0e611bb09609600dc266262efcc1"
+  resolved "https://registry.npmjs.org/webpack/-/webpack-4.2.0.tgz#a4f80807651a0e611bb09609600dc266262efcc1"
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^3.0.0"

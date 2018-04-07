@@ -17,7 +17,8 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-class HomePage extends React.Component {
+@connect(mapStateToProps, mapDispatchToProps)
+class ListPage extends React.Component {
   render() {
     const { count, add } = this.props;
     return (
@@ -30,4 +31,4 @@ class HomePage extends React.Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+export default ListPage;

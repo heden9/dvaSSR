@@ -1,8 +1,13 @@
 {
   "presets": [
-    ["es2015", { "loose": true }],  // loose是一个比较松散的版本
-    "stage-0",
-    "react"
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      },
+      "loose": true
+    }],
+    "react",
+    "stage-0"
   ],
   "plugins": [
     "transform-decorators-legacy",
